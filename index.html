@@ -1,56 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargar APK</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+<title>Descargar APP Sensor</title>
 
-    <style>
-        body{
-            margin:0;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:#0f172a;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 
-        button{
-            width:80px;
-            height:80px;
-            border:none;
-            border-radius:50%;
-            background:#22c55e;
-            color:white;
-            cursor:pointer;
-            transition:.2s;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        button:hover{
-            transform:scale(1.1);
-            background:#16a34a;
-        }
-    </style>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    font-family:'Oswald', sans-serif;
+    padding:10px;
+}
+
+.card{
+    width:260px;
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+h1{
+    font-size:24px;
+    color:black;
+    font-weight:500;
+    margin-bottom:18px;
+    line-height:1.2;
+}
+
+.download-btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    text-decoration:none;
+    transition:transform .2s ease;
+}
+
+.download-btn:hover{
+    transform:scale(1.1);
+}
+
+.download-btn svg{
+    width:56px;
+    height:56px;
+    color:rgb(56, 72, 57);
+}
+</style>
 </head>
 <body>
 
-<button onclick="downloadAPK()">
-    <i data-lucide='download'></i>
-</button>
+<div class="card">
+    <h1>Descargar APP Sensor</h1>
+
+    <a class="download-btn"
+       href="./Soil_Detector_1.0.1.apk"
+       download="Soil_Detector_1.0.1.apk">
+        <i data-lucide="download"></i>
+    </a>
+</div>
 
 <script>
-    lucide.createIcons();
-
-    function downloadAPK(){
-        const a = document.createElement('a');
-        a.href = './Soil_Detector_1.0.1.apk';
-        a.download = 'Soil_Detector_1.0.1.apk';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-    }
+lucide.createIcons();
 </script>
 
 </body>
