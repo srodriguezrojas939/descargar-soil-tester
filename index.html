@@ -2,65 +2,52 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Descargar APP Sensor</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
-*{
+html,body{
     margin:0;
     padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width:max-content;
+    height:max-content;
+    overflow:hidden;
     background:transparent;
-    font-family:'Oswald', sans-serif;
-    padding:10px;
+    font-family:'Oswald',sans-serif;
 }
 
 .card{
     width:260px;
-    background:white;
-    border-radius:18px;
     padding:20px;
+    background:#fff;
+    border-radius:18px;
     text-align:center;
     box-shadow:0 4px 15px rgba(0,0,0,.12);
 }
 
 h1{
     font-size:24px;
-    color:black;
-    font-weight:500;
-    margin-bottom:18px;
-    line-height:1.2;
+    margin:0 0 18px;
+    color:#000;
 }
 
 .download-btn{
     display:inline-flex;
-    justify-content:center;
     align-items:center;
-    width:80px;
-    height:80px;
-    border-radius:50%;
+    justify-content:center;
     text-decoration:none;
-    transition:transform .2s ease;
-}
-
-.download-btn:hover{
-    transform:scale(1.1);
 }
 
 .download-btn svg{
-    width:56px;
-    height:56px;
-    color:rgb(56, 72, 57);
+    width:58px;
+    height:58px;
+    color:rgb(56,72,57);
+    transition:.2s;
+}
+
+.download-btn:hover svg{
+    transform:scale(1.12);
 }
 </style>
 </head>
@@ -71,7 +58,7 @@ h1{
 
     <a class="download-btn"
        href="./Soil_Detector_1.0.1.apk"
-       download="Soil_Detector_1.0.1.apk">
+       download>
         <i data-lucide="download"></i>
     </a>
 </div>
