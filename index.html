@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar APK</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#0f172a;
+        }
+
+        button{
+            width:80px;
+            height:80px;
+            border:none;
+            border-radius:50%;
+            background:#22c55e;
+            color:white;
+            cursor:pointer;
+            transition:.2s;
+        }
+
+        button:hover{
+            transform:scale(1.1);
+            background:#16a34a;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="downloadAPK()">
+    <i data-lucide='download'></i>
+</button>
+
+<script>
+    lucide.createIcons();
+
+    function downloadAPK(){
+        const a = document.createElement('a');
+        a.href = './Soil_Detector_1.0.1.apk';
+        a.download = 'Soil_Detector_1.0.1.apk';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    }
+</script>
+
+</body>
+</html>
